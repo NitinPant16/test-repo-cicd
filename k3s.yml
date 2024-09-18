@@ -1,3 +1,4 @@
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -32,7 +33,7 @@ metadata:
 spec:
   selector:
     app: nodeapp 
-  type: NodePort
+  type: ClusterIP
   ports:
   - protocol: TCP
     port: 80
