@@ -19,7 +19,6 @@ spec:
       containers:
       - name: nodeserver
         image: nitintbi/node-ci-cd:latest
-        imagePullPolicy: Always
         ports:
         - containerPort: 80
         
