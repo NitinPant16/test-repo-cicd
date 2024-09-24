@@ -8,8 +8,12 @@ metadata:
     app: nodeapp
 spec:
   replicas: 5
+  minReadySeconds: 30
   strategy:
-    type: Recreate
+    type: RollingUpdates
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
   selector:
     matchLabels:
       app: nodeapp
