@@ -9,9 +9,7 @@ metadata:
 spec:
   replicas: 4
   startegy:
-    rollingupdate:
-      maxSurge: 25%
-      maxUnavailable: 25%
+    type: Recreate
   selector:
     matchLabels:
       app: nodeapp
@@ -23,6 +21,7 @@ spec:
       containers:
       - name: nodeserver
         image: nitintbi/node-ci-cd:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
         
