@@ -7,8 +7,8 @@ metadata:
   labels:
     app: nodeapp
 spec:
-  replicas: 2
-  startegy:
+  replicas: 5
+  strategy:
     type: Recreate
   selector:
     matchLabels:
