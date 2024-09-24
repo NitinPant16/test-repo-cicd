@@ -10,7 +10,7 @@ spec:
   replicas: 5
   minReadySeconds: 30
   strategy:
-    type: RollingUpdates
+    type: RollingUpdate
     rollingUpdate:
       maxSurge: 25%
       maxUnavailable: 25%
